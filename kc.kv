@@ -1,0 +1,44 @@
+#:kivy 1.8.0
+
+
+<MenuScreen>:
+
+    BoxLayout:
+
+        Button:
+            text: 'Host'
+            on_press: root.manager.current = 'host'
+
+        Button:
+            text: 'Contestant'
+            on_press: root.manager.current = 'contestant'
+
+        Button:
+            text: 'Quit'
+            on_press: root.stop()
+
+
+<HostScreen>:
+
+    BoxLayout:
+
+        Label:
+            text: 'Host Screen'
+            font_size: '50dp'
+
+        Button:
+            text: 'Menu'
+            on_press: root.manager.current = 'menu'
+
+
+<ContestantScreen>:
+
+    BoxLayout:
+
+        Label:
+            text: 'Contestant Screen'
+            font_size: '35dp'
+
+        Button:
+            text: 'Menu'
+            on_press: root.manager.current = 'menu'
