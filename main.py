@@ -18,6 +18,10 @@ class ContestantScreen(Screen):
     pass
 
 
+class CreateScreen(Screen):
+    pass
+
+
 class KC(Widget):
     pass
 
@@ -32,6 +36,7 @@ class KCApp(App):
         sm.add_widget(MenuScreen(name='menu'))
         sm.add_widget(HostScreen(name='host'))
         sm.add_widget(ContestantScreen(name='contestant'))
+        sm.add_widget(CreateScreen(name='create'))
         return sm
 
 
