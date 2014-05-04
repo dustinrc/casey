@@ -1,4 +1,5 @@
 from kivy.app import App
+from kivy.logger import Logger
 from kivy.uix.widget import Widget
 from kivy.uix.screenmanager import ScreenManager, Screen
 
@@ -38,6 +39,9 @@ class KCApp(App):
         sm.add_widget(ContestantScreen(name='contestant'))
         sm.add_widget(CreateScreen(name='create'))
         return sm
+
+    def on_stop(self):
+        Logger.debug('KCApp: Running on_stop()')
 
 
 if __name__ == '__main__':
