@@ -1,7 +1,7 @@
 import json
 
 
-def create_knowledge_type(kind, attrs):
+def create_knowledge_kind(kind, attrs):
     k = type(kind, (Knowledge,), attrs)
     return k
 
@@ -9,11 +9,11 @@ def create_knowledge_type(kind, attrs):
 class KnowledgePool(object):
 
     def __init__(self, kind):
-        self._type = kind.__name__
+        self._kind = kind.__name__
         self._pool = []
 
     def dump(self):
-        obj = {self._type: [x._data for x in self._pool]}
+        obj = {self._kind: [x._data for x in self._pool]}
         return json.dumps(obj, indent=4)
 
     def add(self, knowledge):
