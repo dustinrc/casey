@@ -13,7 +13,10 @@ class KnowledgePool(object):
         self._pool = []
 
     def dump(self):
-        obj = {self._kind: [x._data for x in self._pool]}
+        obj = {
+            'kind': self._kind,
+            'pool': [x._data for x in self._pool],
+        }
         return json.dumps(obj, indent=4)
 
     def add(self, knowledge):

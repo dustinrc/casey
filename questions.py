@@ -4,9 +4,10 @@ import json
 class Question(object):
 
     def __init__(self):
-        self._question = {}
-        self._question['kind'] = self.__class__.__name__
-        self._question['stem'] = ''
+        self._question = {
+            'kind': self.__class__.__name__,
+            'stem': '',
+        }
 
     def __str__(self):
         return self._question['stem']
