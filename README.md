@@ -1,6 +1,6 @@
-# KC
+# Casey
 
-KC is a knowledge challenge application of the bar & pub trivia genre.
+Casey is a knowledge challenge application of the bar & pub trivia genre.
 Create questions and host a game on your local network.
 
 ## Possible Question Formats

@@ -23,15 +23,15 @@ class CreateScreen(Screen):
     pass
 
 
-class KC(Widget):
+class Casey(Widget):
     pass
 
 
-class KCApp(App):
+class CaseyApp(App):
 
     def build(self):
 
-        self.title = 'KC - Knowledge Challenge'
+        self.title = 'Casey - Knowledge Challenge'
 
         sm = ScreenManager()
         sm.add_widget(MenuScreen(name='menu'))
@@ -41,8 +41,8 @@ class KCApp(App):
         return sm
 
     def on_stop(self):
-        Logger.debug('KCApp: Running on_stop()')
+        Logger.debug('CaseyApp: Running on_stop()')
 
 
 if __name__ == '__main__':
-    KCApp().run()
+    CaseyApp().run()
